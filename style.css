@@ -1,10 +1,26 @@
 :root{
-    --color-hover: darkorange;
+    --color-hover: red;
+    --animation-duration: 2s;
     /* --border-color-hover: hsl(from cyan h s 40% ); */
 }
 
 body{
     background-color: hsl(216, 29%, 27%);
+}
+
+header{
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    padding: 1em;
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+}
+
+header.invisible{
+    /* display: none; */
+    opacity: 0;
+
 }
 
 main {
@@ -20,7 +36,11 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: transform 250ms ease-in-out ;
+    transition: transform 250ms ease-in-out, background-color 1000ms ease-in-out;
+}
+
+#campana > div {
+    transition: background-color 1000ms ease-in-out, border-color 1000ms ease-in-out;
 }
 
 #anilla{
@@ -80,3 +100,39 @@ main {
 #campana:hover > #cinturon{
     border-color: hsl(from var(--color-hover) h s 40% );
 }
+
+/* * {
+    border: 1px solid magenta
+} */
+
+#campana{
+    transform-origin: 50% 5%;
+    animation: dingdong var(--animation-duration) ease-in-out 0s alternate infinite;
+}
+
+@keyframes dingdong{
+    0% {
+        transform:rotate(45deg);
+    }
+    100%{
+        transform:rotate(-45deg);
+    }
+}
+
+#badajo{
+    animation: dongding 2s ease-in-out 0s alternate infinite;
+}
+
+@keyframes dongding {
+    0%{
+        left: 50px;
+    
+    }
+    95%{
+        left: -50px;
+    }
+    100%{
+        left: -50px;
+    }
+}
+
