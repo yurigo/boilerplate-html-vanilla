@@ -3,7 +3,52 @@ body{
 }
 
 main {
-    /* width: 100vw; */
     height: 100vh;
-    background-color: hsl(50, 29%, 27%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#campana{
+    background-color: transparent;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#anilla{
+    position: relative;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* background-color: orange; */
+    border: 10px solid orange;
+}
+
+#cuerpo{
+    border-radius: 50% 50% 0 0;
+    width: 150px;
+    height: 200px;
+    background-color: orange;
+}
+
+#cinturon{
+    border-radius: 20px;
+    width: 250px;
+    height: 50px;
+    background-color: orange;
+    border: 2px solid darkorange;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,.2);
+}
+
+#badajo{
+    position: relative;
+    bottom: 37px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: orange;
+    z-index: -1;
 }
